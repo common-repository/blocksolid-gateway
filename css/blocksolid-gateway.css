@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+body.locked {
+	position: relative;
+	margin: 0; height: 100%; overflow: hidden;
+}
+
+body.locked>*:not(#blocksolid_gateway_login_message_modal,#blocksolid_gateway_login_message) {
+	opacity: 0.05;
+	z-index: -1;
+	pointer-events: none;
+	filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+#blocksolid_gateway_login_message_modal {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: transparent;
+	content: " ";
+	z-index: 0;
+}
+
+#blocksolid_gateway_login_message {
+	position: fixed;
+	top: 30vh;
+	left: 50%;
+    transform: translate(-50%, 0);
+	display: block;
+	z-index: 1;
+	opacity: 1;
+}
+
+p.blocksolid_gateway_login_message_title {
+	margin-bottom: 30px;
+}
+
+p.blocksolid_gateway_login_message_title > strong {
+	font-size: 20px!important;
+}
+
+.language-switcher,
+.privacy-policy-page-link,
+p#backtoblog {
+    display: none;
+}
+
+#loginform {
+	border-radius: 10px;
+	padding: 30px;
+	border: 1px solid #ccc;
+	min-width: 300px;
+}
